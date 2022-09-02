@@ -1,10 +1,20 @@
-const loadPhones = async() =>{
-    const url =  `https://openapi.programming-hero.com/api/phones?search=${searchText}`
+const loadAllCategories = async() =>{
+    const url = `https://openapi.programming-hero.com/api/news/categories`
     const res = await fetch(url);
     const data = await res.json();
-    displayPhones(data.data, dataLimit);      
+    return data;  
 }
 
-const loadCategories = async() =>{
-    const url = ``
+const SetAllCategories = async () =>{
+    // console.log(loadAllCategories())
+    // loadAllCategories();
+
+    const data = await loadAllCategories();
+    console.log(data);
+
 }
+
+SetAllCategories();
+
+// loadAllCategories();
+    
