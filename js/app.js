@@ -10,11 +10,17 @@ const SetAllCategories = async () =>{
     // loadAllCategories();
 
     const data = await loadAllCategories();
-    console.log(data);
+    const menu = document.getElementById("all-menu");
+    for(const category_id of data)
+    {
+        console.log(data.category_id)
+        const li = document.createElement("li");
+        li.innerHTML = `<a>${data.category_id}</a>`;
+        menu.appendChild(li);
+    }
 
 }
 
-SetAllCategories();
+// SetAllCategories();
 
-// loadAllCategories();
-    
+loadAllCategories();
