@@ -128,7 +128,7 @@ const displayDetails = (detailsInfo) =>{
     title.innerText = `${details.title}`;
     const modalBody = document.getElementById('modal-body');
     modalBody.innerHTML =`
-    <img src="${details.image_url}" class="img-fluid" alt="">
+    <img src="${details.image_url}" class="w-50 d-block mx-auto" alt="">
     <p >${details.details}</p>
     <p > Rating: ${details.rating.number}</p>
     <p > Badge: ${details.rating.badge}</p>
