@@ -37,7 +37,7 @@ try {
 
 const displayNews = (newss) => {
      
-                     // No news alert 
+     // No news alert 
     const alertContainer = document.getElementById('notFound-msg');
     if(newss.length === 0){
         alertContainer.classList.remove('d-none')
