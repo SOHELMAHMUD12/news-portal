@@ -114,15 +114,10 @@
 
 
 
-
-
-
-
-
-
-
-
  // category function
+
+
+
  const dataLoad = () => {
     const url = ` https://openapi.programming-hero.com/api/news/categories`;
     try {
@@ -133,15 +128,16 @@
         console.log(error);
     }
 };
+
 // category display 
 const displayData = (categorisArray) => {
     const categoris = categorisArray.news_category
     const categoriContainer = document.getElementById('category-container');
 
     categoris.forEach(categori => {
-    const categoriDiv = document.createElement('div');
+    const categoriDiv = document.createElement('li');
     categoriDiv.innerHTML = `
-    <p class="categori-text text-center button-style" onclick=" newsLoad(${categori.category_id})"> ${categori.category_name}</p>
+    <a class="categori text-center button-style" onclick=" newsLoad(${categori.category_id})"> ${categori.category_name}</a>
     `
     categoriContainer.appendChild(categoriDiv); 
     });
